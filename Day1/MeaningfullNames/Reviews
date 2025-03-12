@@ -9,13 +9,17 @@ Review 2:
 3.	Consider using IEnumerable<T> if modification is not required: If iteration is the only requirement, prefer IEnumerable<Employee> to avoid unnecessary memory usage from ToList().
 
 Review 3: Use Descriptive Names
-•	iCounter should be renamed to recordCount.
+
+•	iCounter should be renamed to recordCount
 •	strFullName should be renamed to fullName (remove Hungarian notation).
 •	dModifiedDate should be renamed to lastModifiedDate (use meaningful names).
+• Initialization should be taken care for all above declaration.
  
 Review 4: Use Meaningful Parameter Names
+
 •	pDay should be renamed to dayOfWeek (remove Hungarian notation).
 •	pAmount should be renamed to purchaseAmount.
+• For just Shop Open, No need of pAmount parameter
 
 Review 5 
 ->	Naming Conventions:
