@@ -1,0 +1,48 @@
+Review 1:
+1.	Use meaningful variable names: Change d to elapsedDays to enhance code readability.
+2.	Avoid redundant comments: A well-named variable often eliminates the need for a comment.
+3.	Follow naming conventions: Use camelCase for local variables (elapsedDays).
+
+Review 2:
+1.	Use meaningful variable names: Change dataFromDb to employees to make it clear that the list contains employee records.
+2.	Avoid unnecessary comments: The variable name already conveys its purpose, so an extra comment is not needed unless additional context is required.
+3.	Consider using IEnumerable<T> if modification is not required: If iteration is the only requirement, prefer IEnumerable<Employee> to avoid unnecessary memory usage from ToList().
+
+Review 3: Use Descriptive Names
+•	iCounter should be renamed to recordCount.
+•	strFullName should be renamed to fullName (remove Hungarian notation).
+•	dModifiedDate should be renamed to lastModifiedDate (use meaningful names).
+ 
+Review 4: Use Meaningful Parameter Names
+•	pDay should be renamed to dayOfWeek (remove Hungarian notation).
+•	pAmount should be renamed to purchaseAmount.
+
+Review 5 
+->	Naming Conventions:
+      •	Constants should be named using PascalCase. 
+            daysInMonth should be DaysInMonth.
+      •	Variable names should use camelCase. 
+            Artists should be artists.
+      •	Method names should use PascalCase. 
+            EraseDatabase and Restore_database should be RestoreDatabase.
+->	String Literals:
+      •	Use double quotes "" for string literals.
+            Single quotes are for characters.
+->	Method Implementation:
+      •	The methods EraseDatabase and RestoreDatabase are declared but not implemented. They should have a body or be marked as abstract if they are intended to be implemented by derived classes.
+->	Class Naming:
+      •	Class names should use PascalCase. The class animal should be Animal.
+->	Code Consistency:
+      •	Ensure consistent use of access modifiers. Classes and methods should have explicit access modifiers (e.g., public, private).
+
+Review 6:
+Changes:
+•	sWorkDate should be changed to startWorkingDate
+•	modTime should be changed to modificationTime
+ 
+Review 7:
+Changes:
+•	CalculateSalary should be changed to CalculateMonthlySalary to give the function name a proper meaning.
+•	employeephone to employeePhoneNumber
+•	workingdays to numberOfWorkingDays
+•	workinghours to numberOfWorkingHours
