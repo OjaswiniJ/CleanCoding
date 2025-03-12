@@ -1,0 +1,38 @@
+Review 1:
+Cognitive complexity is 5
+Solution : Use a HashSet or Use switch Expression
+
+Review 3:
+Cognitive complexity is high = 12 dues to multiple nesting of if else statements.
+
+1.	Simplify Conditionals: Reduce the number of nested if statements by handling base cases and negative cases early.
+2.	Use Iteration Instead of Recursion: Replace the recursive approach with an iterative one to avoid deep call stacks and improve performance.
+3.	Early Returns: Use early returns for base cases to make the code more readable and reduce nesting.
+
+Review 4: 
+-Unnecessary .Count() in the loop condition[ Use .Count or .Length outside the loop]
+-Unclear variable name (li) [Use a more descriptive name]
+-Declare Variables Close to Their Usage [Move Dispatch(li); closer to where li is first used]
+ 
+  Refactored Code:
+  var cities = new[] { "Austin", "New York", "San Francisco" };
+  int cityCount = cities.Length; // Store length once
+  for (int i = 0; i < cityCount; i++)
+  {
+      DoStuff();
+      DoSomeOtherStuff();
+      string city = cities[i];
+      Dispatch(city);
+  }
+
+Review 5:
+Use an enumeration and directly compare the userRole with the enumeration value. Then, use the enumeration in the conditional statement
+Benefits: code quality, readability, and maintainability.
+ 
+Review 6:
+If the Car class has many properties and methods, Inheritance can be used to create a base class and derive more specific classes from it.
+Create a base class CarDetails class for Make, Model, Color. And then use this class in the derived Class Car.
+
+Review 9:
+Cognitive complexity is 2
+Solution: Use ?? (Null-Coalescing Operator)
