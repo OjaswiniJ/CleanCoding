@@ -1,0 +1,45 @@
+public interface IFile{
+    buffer readPage();
+    bool isEndfFile();
+}
+
+public interface IPrinter{
+    void print(buffer page);
+}
+
+public class PrinterDriver {
+    private IFile file;
+    private IPrinter printer;
+
+    public PrinterDriver(IFile file, IPrinter printer){
+        this.file = file;
+        this.printer = printer;
+    }
+
+    public void print() {
+        buffer page = file.readPage();
+        while (!file.isEndOfFile(page)) {
+            printer.print(page);
+            page = file.readPage();
+        }
+    }
+}
+
+public class TextFile implements IFile {
+
+    public buffer readPage() {
+        return new buffer();
+    }
+
+    public boolean isEndOfFile(buffer page) {
+        return false; 
+    }
+}
+
+public class LaserPrinter implements IPrinter {
+
+    public void print(buffer page) {
+        System.out.println("Printing page with laser printer...");
+    }
+}
+
